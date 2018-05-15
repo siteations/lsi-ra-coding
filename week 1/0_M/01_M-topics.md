@@ -2,8 +2,7 @@
 
 ### Monday. May 21st.
 *general agenda* 
-
-
+---
 *10* summer overview and schedule orientation - pragmatics also - access, keys, network drives, notes, desk assignments, etc. 
 ---
 *11* Javascript-syntax, variables, and control flow [intro to js](https://www.codecademy.com/learn/introduction-to-javascript)
