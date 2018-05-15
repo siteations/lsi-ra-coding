@@ -28,7 +28,7 @@
 *3* Images as Data - sampling and visualization in paper.js
 + [paper - image as data prompt](./webpack-paper-image/)
 
-   Read the prompt posted above in the webpack-paper-image setup. Copy folder and rename. You should be able to get to the #4 filters or #5 sorting functions by 6pm. We'll return to this Friday afternoon for additional build-out and interactions.
+   Read the prompt posted above in the webpack-paper-image/src/index.js file. As always, copy the entire folder and rename. You should be able to get to the #4 filters or #5 sorting functions by 6pm. We'll return to this Friday afternoon for additional build-out and interactions.
    
    
   
