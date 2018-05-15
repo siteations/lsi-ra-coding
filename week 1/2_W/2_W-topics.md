@@ -33,7 +33,7 @@
 
 *4:30 or 5pm* Review solutions and approaches - compare p5.js code and paper.js code - 
    
-   I'll posted links to completed samples built in both libraries. Here, I want you to consider what basic javascript understandings and approaches you're working with, as well as considering how the methods built into libraries (and their oop approach) affect your ability to create advanced interactions easily.
+   I'll post links to completed samples built in both libraries. Here, I want you to consider what basic javascript understandings and approaches you're working with, as well as considering how the methods built into libraries (and their oop approach) affect your ability to create advanced interactions easily.
    
    Look over the code closely and get familiar with different elements/approaches. (comment sections on and off to explore) We're going to work with p5.js Thursday morning, and continue to explore in paper.js Thursday afternoon.
    
