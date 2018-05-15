@@ -1,8 +1,12 @@
 # LSI- 
 
 ### Monday. May 21st.
+
 *general agenda* 
 ---
+Across the summer, we will be working in javascript to mock-up different reading experiences, examine opportunities to integration textual and visual mark-up, and generally explore how the Landscape Studies Platform might offer alternate collation and visualization of landscape documents. To ground a larger array of work - with field imagery, sensor data, and distributed (api-sourced) digital texts - the entire LSI team will begin this May by getting an initial grasp on the structures, syntax, and affordances of 'data' and computation. 
+
+
 *10* summer overview and schedule orientation - pragmatics also - access, keys, network drives, notes, desk assignments, etc. 
 ---
 *11* Javascript-syntax, variables, and control flow [intro to js](https://www.codecademy.com/learn/introduction-to-javascript)
