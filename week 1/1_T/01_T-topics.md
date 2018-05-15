@@ -27,7 +27,7 @@
    
    You'll have 30 on either side of lunch, in teams to create functions and then we're review your solutions and approaches between 2:30 and 3:00.
 
-*3* Javascript-objects and classes [intro to js](https://www.codecademy.com/learn/introduction-to-javascript)
+*3* Javascript- objects and classes [intro to js](https://www.codecademy.com/learn/introduction-to-javascript)
 
 *4* Additional info on coding / code references
 + object lessons - [prototypical inheritance 1](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain),  [prototypical inheritance 2](http://sporto.github.io/blog/2013/02/22/a-plain-english-guide-to-javascript-prototypes/)
@@ -35,10 +35,14 @@
 
 ---
 *5ish* Exercises
-+ Vehicles, Types, Models  *to come*
-+ Mammals, Cats, Kittens *to come*
++ (Mammals, Cats, Kittens)[https://repl.it/@siteations/LSI-Mammal]
++ Vehicles, Types, Models  *to be built together*
    
-   You'll have the remainder of the day (until 6), in teams, to create functions and then we're review your solutions and approaches Wednesday morning to warm-up and get started.
+   We'll likely build through objects and prototype inheritance together, given the need to understand how these structures work in object-oriented-programming and the limited afternoon time.
+   
+   
+  
+
    
    
   
