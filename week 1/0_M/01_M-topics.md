@@ -7,6 +7,7 @@
 *10* summer overview and schedule orientation - pragmatics also - access, keys, network drives, notes, desk assignments, etc. 
 ---
 *11* Javascript-syntax, variables, and control flow [intro to js](https://www.codecademy.com/learn/introduction-to-javascript)
+
 *12* Additional info on coding / code references
 + [MDN/Mozilla code documentation for Javascript, for syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 + [Stack-Overflow, for questions](https://stackoverflow.com/questions/5744233/how-to-empty-the-content-of-a-div)
@@ -24,6 +25,7 @@
 ### Lunch
 ---
 *3* Javascript-functions, scope, and arrays [intro to js](https://www.codecademy.com/learn/introduction-to-javascript)
+
 *4:15* Additional info on coding / code references
 + storing data - [literal and by reference structures](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
 + loop and iteration preview - for arrays *whiteboard overview*
