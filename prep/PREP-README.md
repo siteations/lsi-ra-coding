@@ -6,6 +6,7 @@ Across the summer, we will be working in javascript to mock-up different reading
 
 
 + get comfortable with the command line interface - [complete the code academy tutorial on CLI](https://www.codecademy.com/learn/learn-the-command-line)
+   
    We'll work with Code Academy tutorials - *free access* - in preparation for building custom functions, scripts, and programs. If you don't have an account, please sign-up now.
 ---
 + [install node](https://nodejs.org/en/)
