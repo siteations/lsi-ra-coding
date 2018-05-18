@@ -12,13 +12,13 @@
 *10:30* javascript and asynchronous calls [intro to js](https://www.codecademy.com/learn/introduction-to-javascript) 
 ---
 *11:30* Asynchronicity made easy - creating simplified calls [axios npm](https://www.npmjs.com/package/axios) 
-+ [chaining axios calls to the BHL api](./) 
++ [chaining axios calls to the BHL api](./axois-sample) 
 
    we'll walk through this example together, noting differences from the introduction to asynchronous calls
 ---
-*12* Javascript - Promises structure explained [js promises an introduction](https://developers.google.com/web/fundamentals/primers/promises#whats-all-the-fuss-about) *this may be a little bit opaque, so we'll do a few examples*
+*12* Javascript - Promises structures explained [js promises an introduction](https://developers.google.com/web/fundamentals/primers/promises#whats-all-the-fuss-about) *this may be a little bit opaque, so we'll do a few examples*
 + additional promise tools [bluebird npm](https://www.npmjs.com/package/bluebird)
-+ practice examples [axios, then, and promiseAll practice with DPLA](./)
++ practice examples [axios, then, and promiseAll practice with DPLA](./bluebird-sample)
    
 ---
 ### Lunch
