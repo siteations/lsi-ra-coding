@@ -29,3 +29,15 @@ Across the summer, we will be working in javascript to mock-up different reading
    We'll do the initial days exercises and problems on repl.it's instant development environment. Having an account means you'll be able to save work and return to a problem set or issue. This is also handy for solving discrete functions and testing them immediately, in advance of integrating them within larger programs.
    
 For all of this installation and tutorial activity, please track your time spent. It will be incorporated into your hours for the first week.
+
+---
+### cheatsheet links ###
+
+not cheating, just really useful reference (I'll add materials here continuously):
+
++ [github commands](https://education.github.com/git-cheat-sheet-education.pdf)
++ [terminal commands](https://gist.github.com/poopsplat/7195274)
+
+   You'll get used to constantly googling things and keeping documentation open as you work... just part of the process.
+   
+
