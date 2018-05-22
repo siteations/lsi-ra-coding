@@ -24,7 +24,7 @@ Across the summer, we will be working in javascript to mock-up different reading
    
    You'll have 45 minutes, in teams to create functions and then we're review your solutions and approaches until 1:45.
 ---
-### Lunch
+### Lunch - remained of afternoon shifted to Tuesday morning
 ---
 *3* Javascript-functions, scope, and arrays [intro to js](https://www.codecademy.com/learn/introduction-to-javascript)
 
@@ -38,7 +38,6 @@ Across the summer, we will be working in javascript to mock-up different reading
 + [FizzBuzz](https://repl.it/@siteations/LSI-FizzBuzz)
 + [ArrayTranspose](https://repl.it/@siteations/LSI-TransposeArray)
 + [SwitchBacks 2](https://repl.it/@siteations/LSI-SwitchBacks-2)
-+ Nested Arrays *to come*
    
    You'll have until 5:30, in teams, to create functions and then we're review your solutions and approaches on Monday evening/Tuesday morning.
    
