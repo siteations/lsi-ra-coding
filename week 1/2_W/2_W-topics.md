@@ -4,8 +4,43 @@
 
 *general agenda* 
 ---
+*10* wake-up . code a codwar problem individually
+---
+*10:30* another git technique - merge
 
-*10* Review of Tuesday and general questions, also coding challenge opportunities [codewars](https://www.codewars.com/)
++ 
+---
+*11* Exercises - to explore objects, array manipulations - 
+   we'll alternate team codings and 30 minute individual coding sessions - to sketch approached
++ [Prime](https://repl.it/@siteations/LSI-Prime) iteration
++ [MakeNoise](https://repl.it/@siteations/LSI-MakeNoise) object access
++ [sumCart](https://repl.it/@siteations/LSI-MakeNoise) object access
+*bonus below*
++ [PigLatin](https://repl.it/@siteations/LSI-PigLatin) mixed array and string manipulation
+   
+   We'll work through these exercises and push introductions of classes to wednesday afternoon.
+---
+### Lunch
+---
+*2* 
++ ['reduce' iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
++ [Fibonacci](https://repl.it/@siteations/LSI-Fibonacci) - we'll talk through recursion here and base-case structuring.
++ [factory functions - pattern for creating objects](https://www.sitepoint.com/factory-functions-javascript/)
+---
+*3* Javascript- objects and classes [intro to js](https://www.codecademy.com/learn/introduction-to-javascript)
+---
+*4-option* Additional info on coding / code references
++ object lessons - [prototypical inheritance 1](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) and simplified [notes on oop](https://repl.it/@siteations/notes-oop)
++ (Mammals, Cats, Kittens)[https://repl.it/@siteations/LSI-Mammal]
+---
+*4-option* Additional Practice creating accessible (and everyday functions)
++ [Calculator](https://repl.it/@siteations/LSI-Calculator) object and internal methods
++ [Accessor](https://repl.it/@siteations/LSI-Accessor) - more difficult class creation
+
+
+#### We start with graphic manipulation on Thursday! ####
+
+*10* Review of Wednesday and general questions, also coding challenge opportunities [codewars](https://www.codewars.com/)
 
 *10:30* P5.js and paper.js library introductions *code and compare* for starting to build visual feedback [p5.js](https://p5js.org/), [paper.js](http://paperjs.org/)
 
