@@ -4,20 +4,18 @@ console.log('hello there, start tinkering');
 
 //-------------------------initial mouse conditional-----------------
 
-// function setup() {
-//   createCanvas(640, 480);
-// }
+//follow the 'get started directions in p5.js'
 
-// function draw() {
-//   if (mouseIsPressed) {
-//     fill(0);
-//   } else {
-//     fill(255);
-//   }
-//   ellipse(mouseX, mouseY, 80, 80);
-// }
+//add code here. . .
 
-//-------------------------initial mouse conditional adapted----------------------------
+
+
+
+
+
+
+
+//------------initial mouse conditional adapted---------------------
 
 /*
 

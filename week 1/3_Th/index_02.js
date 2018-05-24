@@ -29,7 +29,7 @@ third - create a non-looping version of this initial interaction that modifies a
 
 */
 
-//-------------------------button objects-------------------------------------------------
+//-------------------------button objects-------------------------------
 
 /*
 
@@ -46,7 +46,7 @@ a successful sketch will  include, at minimum setup(), draw(), and button() func
 */
 
 
-//-------------------------emission objects-------------------------------------------------
+//-------------emission objects-------------------------------
 
 /*
 
