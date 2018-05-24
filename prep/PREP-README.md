@@ -39,6 +39,7 @@ not cheating, just really useful reference (I'll add materials here continuously
 + [terminal commands](https://gist.github.com/poopsplat/7195274)
 + [es6 changes and syntax](https://github.com/DrkSephy/es6-cheatsheet) a copy is also in the prep folder
 + .gitignore files for limiting what is stored in github [templates](https://github.com/github/gitignore), [reference syntax](https://git-scm.com/docs/gitignore)
++ to show hidden files in recent version of mac (i.e. see .git folders and .gitignore files) use the following: cmd+shift+. *simple!*
 
    You'll get used to constantly googling things and keeping documentation open as you work... just part of the process.
    

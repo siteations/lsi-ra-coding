@@ -13,20 +13,24 @@
    As you open different prompts for the day, you should save them into your folder - to work out solutions and simply update the link from your index.html
 
 ---
-*11:30ish* Exercises - modification and interaction with the 'get started' file (use your new js knowledge and explore p5's documentation)
+*11:30ish - 1pm* Exercises - modification and interaction with the 'get started' file (use your new js knowledge and explore p5's documentation)
 + [simple modifications](./index-00.js)
+
++ feel free to create addition sketches, copy and paste examples and console.log through existing code pieces to understand different interactions
+
 
 ---
 ### Lunch
 ---
-*2ish* Review solutions and build out - we'll take a bit more time to look over your multiple button instances and approach before adding additional elements to the sketch. 
+*2ish* Review solutions and build out - we'll look over your insertions before adding additional elements to the sketch. 
 
-*2pm on* Exercises - extended modifications - working with classes
-+ [complex 1 - button objects](./index-01.js)
-+ [complex 2 - emitter objects - add any animation as a class](./index-02.js)
+*2-on* Exercises - extended modifications - practicing classes in the p5 environment
++ [complex 1 - emitter objects or a class of animation of any sort](./index-02.js)
++ [complex 2 - button objects](./index-01.js)
 + [complex 3 - integration of objects and interactions](./index-03.js) 
 
-*5pm* Review solutions and approaches - compare p5.js code and paper.js code - 
+*5pm* Review solutions and approaches - (also compare p5.js code and paper.js code) - 
+
    
    I'll post links to completed samples built in both libraries. Here, I want you to consider what basic javascript understandings and approaches you're working with, as well as considering how the methods built into libraries (and their oop approach) affect your ability to create advanced interactions easily.
    
