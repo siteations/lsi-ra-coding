@@ -1,6 +1,6 @@
 # LSI- 
 
-### Thursday. May 24th.
+### Friday. May 25th.
 
 *general agenda* 
 ---

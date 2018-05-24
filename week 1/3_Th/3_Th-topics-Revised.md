@@ -15,7 +15,9 @@
 ---
 *11:30ish - 1pm* Exercises - modification and interaction with the 'get started' file (use your new js knowledge and explore p5's documentation)
 + [simple modifications](./index-00.js)
+
 + feel free to create addition sketches, copy and paste examples and console.log through existing code pieces to understand different interactions
+
 
 ---
 ### Lunch
@@ -28,6 +30,7 @@
 + [complex 3 - integration of objects and interactions](./index-03.js) 
 
 *5pm* Review solutions and approaches - (also compare p5.js code and paper.js code) - 
+
    
    I'll post links to completed samples built in both libraries. Here, I want you to consider what basic javascript understandings and approaches you're working with, as well as considering how the methods built into libraries (and their oop approach) affect your ability to create advanced interactions easily.
    
