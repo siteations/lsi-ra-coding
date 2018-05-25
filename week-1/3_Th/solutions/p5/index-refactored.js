@@ -13,8 +13,6 @@ link behaviors. . .
 
 var labels = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eight', 'nineth'];
 var buttons = [];
-var emissions = [];
-var emit = [];
 var wb = 100;
 
 
@@ -28,7 +26,7 @@ function setup(){
 
 	})
 
-	frameRate(10);
+	frameRate(30);
 }
 
 function draw(){
