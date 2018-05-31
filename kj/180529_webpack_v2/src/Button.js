@@ -16,7 +16,7 @@ class Button {
 
   // for mouse in correct area
 	mouse(){
-  		return (mouseX>this.x && mouseX<this.x+this.w) && (mouseY>this.y && mouseY<this.y+this.h)
+  		return (p5.mouseX>this.x && p5.mouseX<this.x+this.w) && (mouseY>this.y && mouseY<this.y+this.h)
   }
 
   //boolean to make active/inactive

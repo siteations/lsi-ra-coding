@@ -3,6 +3,8 @@ import p5 from 'p5';
 import Button from './Button.js';
 import Emitter from './Emitter.js';
 
+console.log(window);
+
 var labels = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eight', 'nineth'];
 var buttons = [];
 var wb = 100;
@@ -16,7 +18,7 @@ const sketch = (p5) => {
 
   //
 
-p5.setup =()=>{
+  p5.setup =()=>{
 
   	p5.createCanvas(p5.windowWidth, p5.windowHeight);
 
@@ -32,7 +34,7 @@ p5.setup =()=>{
 
 //
 
-p5.draw =()=>{
+  p5.draw =()=>{
 
   	 buttons.forEach(button=>{
 
@@ -54,6 +56,7 @@ p5.draw =()=>{
     buttons.forEach(button=>{
      button.updateButton();
   }
+}
 }
 
 new p5(sketch);
