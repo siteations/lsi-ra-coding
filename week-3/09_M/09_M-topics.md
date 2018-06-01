@@ -1,6 +1,6 @@
 # LSI- #
 
-### Monday. June 4th. ###
+### Friday. June 1st. ###
 
 *general agenda* 
 ---

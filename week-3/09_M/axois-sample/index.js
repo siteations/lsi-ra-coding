@@ -2,6 +2,11 @@ var axios = require('axios');
 
 console.log('hello there, welcome to axios testing... note we can work direct from node when desired');
 
+//working with node, axios, and the biodiversity heritage library api
+
+//see https://www.biodiversitylibrary.org/api2/docs/docs.html
+
+//see https://www.npmjs.com/package/axios and https://github.com/axios/axios
 
 var kBH = "afa44242-67ed-4929-a43b-59ed5c174019";
 
@@ -39,25 +44,33 @@ var title = '';
 
 var titlemeta = `https://www.biodiversitylibrary.org/api2/httpquery.ashx?op=GetTitleMetadata&titleid=${title}&items=t&apikey=${kBH}&format=json`
 
-
-axios.get(subj)
+//1) work from this starting axios setup
+var query = axios.get(subj)
   .then(function (response) {
   	//examine the response object in general
-  	console.log(response);
+  	//console.log(response);
 
-  	// var resultsArr = response.data.Result.map(item=>{return {official:item.SubjectText.trim()}});
-  	// official = resultsArr[3].official;
-  	// console.log(official);
-
-  	// axios.get(fullSubject)
-  	// .then(res=>{
-  	// 	console.log(res.data.Result.length);
-
-  		//add a call to get one of the items in the results list using the variables above
-  	})
+    //2) clean and extract what you want from response
 
 
+    //3) add a call to get one of the items in the results list using the 'official' variable above
+  	//hint: use axios.get again ( consider using return here; why?)
+
+        		//4) add a call to get the full range of metadata on that title
+            //hint: use axios.get again ( consider using return here; why?)
   })
   .catch(function (error) {
     console.log(error);
   });
+
+
+query.then(res=>{
+      //5) if you have returned your other 'get' calls, then you should be able to grab the result of query at a later date in your code...
+
+      //6) create an array of thumbnails given the entry's page items-
+
+
+    })
+  .catch(function (error) {
+      console.log(error);
+    });
