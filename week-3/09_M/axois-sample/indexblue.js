@@ -1,4 +1,5 @@
 var axios = require('axios');
+var Promise = require('bluebird');
 
 console.log('hello there, welcome to axios testing... note we can work direct from node when desired');
 
@@ -48,52 +49,89 @@ var titlemeta = `https://www.biodiversitylibrary.org/api2/httpquery.ashx?op=GetT
 var query = axios.get(subj)
   .then(function (response) {
   	//examine the response object in general
-  	//console.log(response.data.Result);
+  	console.log(response.data.Result);
 
     //2) clean and extract what you want from response
-    official = response.data.Result.filter(item=>{
-      return item.SubjectText === 'Tiger moths'
-    })[0]['SubjectText'];
 
-    console.log('choosen subject: ', official);
+    // official = response.data.Result.filter(item=>{
+    //   return item.SubjectText === 'Tiger moths'
+    // })[0]['SubjectText'];
+    var offArr = response.data.Result.map(item=>{
+      return item.SubjectText;
+    })
+
+    console.log('choosen subject: ', offArr);
 
     //3) add a call to get one of the items in the results list using the 'official' variable above
   	//hint: use axios.get again ( consider using return here; why?)
-    var fullSubject = `https://www.biodiversitylibrary.org/api2/httpquery.ashx?op=GetSubjectTitles&subject=${official}&apikey=${kBH}&format=json`
 
-    var fullSubjSearch = 'https://www.biodiversitylibrary.org/api2/httpquery.ashx'
+    // var fullSubject = `https://www.biodiversitylibrary.org/api2/httpquery.ashx?op=GetSubjectTitles&subject=${official}&apikey=${kBH}&format=json`
 
-    var paraObj = {
-      params: {
-        op: 'GetSubjectTitles',
-        subject: official,
-        apikey: kBH,
-        format: 'json'
-      }
-    }
+    var baseAddress = 'https://www.biodiversitylibrary.org/api2/httpquery.ashx'
 
-    return axios.get(fullSubjSearch, paraObj)
-    .then(function(res){
-      // add additional functions here
-      console.log('result from second query: ', res);
+    var arrSubjectCall = offArr.map(item=>{ //arrSubjectCall is an array of promises
 
-      var title = res.data.Result[0]['TitleID'];
-
-      var titlemeta = `https://www.biodiversitylibrary.org/api2/httpquery.ashx`
-      //?op=GetTitleMetadata&titleid=${title}&items=t&apikey=${kBH}&format=json`
       var paraObj = {
         params: {
-          op: 'GetTitleMetadata',
-          titleid: title,
-          items:'t',
+          op: 'GetSubjectTitles',
+          subject: item,
           apikey: kBH,
           format: 'json'
         }
       }
 
-      return axios.get(titlemeta, paraObj)
+      return axios.get(baseAddress, paraObj);
 
-    });
+    })
+
+    console.log('promises in action ', arrSubjectCall);
+
+    return Promise.all(arrSubjectCall)
+      .then(function(results){
+
+        var allResults = results.map(res=>{
+          return res.data.Result;
+        }).filter(res=>{
+          return res.length > 0;
+        });
+
+        var allResFlat=[];
+
+        allResults.forEach(arr=>{
+          allResFlat.push(...arr);
+        })
+
+        console.log('so many subject searches: ', allResFlat, allResFlat.length);
+
+
+
+
+
+
+      })
+
+    // return axios.get(fullSubjSearch, paraObj)
+    // .then(function(res){
+    //   // add additional functions here
+    //   console.log('result from second query: ', res);
+
+    //   var title = res.data.Result[0]['TitleID'];
+
+    //   var titlemeta = `https://www.biodiversitylibrary.org/api2/httpquery.ashx`
+    //   //?op=GetTitleMetadata&titleid=${title}&items=t&apikey=${kBH}&format=json`
+    //   var paraObj = {
+    //     params: {
+    //       op: 'GetTitleMetadata',
+    //       titleid: title,
+    //       items:'t',
+    //       apikey: kBH,
+    //       format: 'json'
+    //     }
+    //   }
+
+    //   return axios.get(titlemeta, paraObj)
+
+    // });
         		//4) add a call to get the full range of metadata on that title
             //hint: use axios.get again ( consider using return here; why?)
   })

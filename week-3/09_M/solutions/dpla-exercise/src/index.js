@@ -23,6 +23,7 @@ window.onload=(()=>{
 	document.querySelector('#mainform').addEventListener('submit', (event)=>{
 		//we'll unpack this listening together
 		event.preventDefault();
+		console.log('this is the submit event target ', event, event.target);
 		var returns = [].slice.call(event.target);
 		returns.pop();
 
