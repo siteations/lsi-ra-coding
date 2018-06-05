@@ -38,6 +38,18 @@ SELECT genre, count(name) as namesum
 #7) List the first and last names of all the actors who played in the 1995 movie 'Braveheart', arranged alphabetically by last name.
 # multiple joins
 
+SELECT first_name, last_name, name
+   FROM movies, roles, actors
+   WHERE  movies.id = roles.movie_id AND roles.actor_id = actors.id
+   AND movies.name = 'Braveheart' AND movies.year= 1995
+   ORDER BY last_name;
 
 
-#8) Leap Noir
+#8) Leap Noir in years divisible by 4: director name, the movie name, and the year, sorted by movie name
+SELECT first_name, last_name, name, year
+   FROM movies, movies_directors, directors
+   WHERE  movies.id = movies_directors.movie_id AND directors.id = movies_directors.director_id
+   AND movies.year%4= 0
+   ORDER BY name;
+
+
