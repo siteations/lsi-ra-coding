@@ -4,27 +4,33 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 
-const kDP = '5923dd6cd08de1200d544796148a13fa' ;
+const key = '4XchKcJeLMhVHlRj2J80nzAm' ;
 
-// see https://pro.dp.la/developers/policies#get-a-key
-// see the larger materials for request structures https://pro.dp.la/developers/requests
-
-// 3 calls, max 50 each, 1) images, 1) objects, 1) books, produced during 19th century
-
-// bring together and sort by date
-
-// use bootstrap to append a series of small divs into row/columns of thumbnails...
-
+var params = {
+			format: 'json',
+			include: 'data',
+			v: '3',
+			start: '0',
+			//q: '',
+			//qmode: '',
+			//'api_key': key
+		}
 
 window.onload=(()=>{
 	console.log('window loaded');
+	
+	var getSample = basicCall('get', params, 25, null);
+	var getAll = basicReturns(getSample);
+	
+	getAll.then(console.log);
+	
+	
+	//console.log(getSample);
+	
+	
+	
+	
 
-
-	var query = grabFormat(null, 'json');
-
-	query.then(result=>{
-		console.log(result.data);
-	})
 
 //-----------------------general selections-----------------------------
 /*
@@ -102,25 +108,72 @@ window.onload=(()=>{
 
 /* write as many functions down here as desired, to simplify your code and avoid repetition */
 
-const subjectFormat = (subjectTerm)=>{
-	return subjectTerm.split(' ').join('+');
-}
-
-
-const grabFormat = ((subject, format)=>{
-	var sample = `http://api.zotero.org/groups/2144277/items`;
+const basicCall=((type,params,limit,adds)=>{
+	var sample = `http://api.zotero.org/groups/2144277/items/top`;
 	var paraObj = {
-		params: {
-			format: format,
-			include: 'bib',
-			v: '3'
-			//'api_key':
-		}
+		params: params
 	}
+	
+	var initial;
+	var total;
+	var series =[];
+	var iterator = limit;
+	var start = 0;
 
-	return Axios.get(sample);
+	var basic = Axios[type](sample, paraObj)
+		.then(result=>{
+			total = result.headers['total-results'];
+			initial = result.data;
+			var i=1;
+			
+			console.log('second call: ', total, initial, params, paraObj);
+			
+			while(params['start'] < +total){
+				params['start'] = i*iterator;
+				//reference issues...
+				series.push(Axios[type](sample, {params:{start:i*iterator}}));
+				i++;
+			}
+			 
+			return {
+				initial: initial,
+				series: series
+			}
+
+		})
+		.catch(console.log);
+		
+		return basic;
 
 });
+
+
+const basicReturns = (promObj=>{
+	
+	var data = [];
+	
+	var getSeries = promObj.then(resObj=>{
+		data = resObj.initial;
+		return resObj.series;
+	})
+	.catch(console.log);
+	
+	var allData = Promise.all(getSeries).then(resSeries=>{
+		var res = resSeries.map(res=>res.data);
+		data = data.concat(...res);
+		data = data.map(res=>res.data);
+		return data;
+		
+	})
+	.catch(console.log);
+	
+	return allData; //promise with master array of data
+	
+})
+
+
+
+
 
 //for instance this is written to simplify tapping the MARC entries of Hathi records to get a page thumbnail
 const getHathiPage = (itemOrigRec) =>{ //pass in entries' original record which lack 'object'
