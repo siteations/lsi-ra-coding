@@ -11,114 +11,46 @@ var params = {
 			include: 'data',
 			v: '3',
 			start: '0',
-			//q: '',
-			//qmode: '',
-			//'api_key': key
+			q: '',
+			qmode: '',
+			'api_key': key
 		}
 
 window.onload=(()=>{
 	console.log('window loaded');
 	
 	var getSample = basicCall('get', params, 25, null);
-	var getAll = basicReturns(getSample);
+	var getReturns = basicReturns(getSample);
 	
-	getAll.then(console.log);
-	
-	
-	//console.log(getSample);
-	
-	
-	
-	
+	getReturns.then(console.log);
 
 
-//-----------------------general selections-----------------------------
-/*
-	document.querySelector('#mainform').addEventListener('submit', (event)=>{
-		//we'll unpack this listening together
-		event.preventDefault();
-		console.log('this is the submit event target ', event, event.target);
-		var returns = [].slice.call(event.target);
-		returns.pop();
-
-		var values = returns.map(item=>{
-			return {
-				id: item.id,
-				checked: (item.className.includes('check'))? item.checked : null,
-				value: item.value
-				}
-		});
-
-		//based on working the values returned create query searches
-		//and load materials to the main page
-		//making several functions is the cleanest way to do this.
-
-		//1) make an array 'calls' that goes thru the form returns
-		//formats the entries and makes calls to the dpla api
-		//this means that calls will be an array of promises
-
-		var calls = values.map(item=>{ // calls should thus hold the three format calls
-
-		var subj = subjectFormat(values[0].value);
-
-		if (item.id !== 'subject' && item.checked){
-			return grabFormat(subj, item.id);
-		}
-
-		}).filter(item=>item!==undefined);
-		*/
-
-
-		//2) use your promise.all functions in bluebird to then handle the results
-		/*Promise.all(calls)
-			.then(results=>{
-				// remember that you are working with arrays of arrays of results
-
-				var res =results.map(i => i.data.docs);
-				var resAll=[].concat(...res);
-
-				// 3) integrate the getHathiPage and get simpEntry functions to format your results
-				// and remember to sort entries by date. . .
-				res = resAll.map(item=>{
-					if (!item.object && item.provider.name==="HathiTrust"){
-						item.object = getHathiPage(item.originalRecord);
-						return simpEntry(item);
-					} else {
-						return simpEntry(item);
-					}
-				}).sort((a,b)=>{return a.date-b.date});
-
-				// 4) fill out the function below that takes your formatted results and adds cards to the main window
-				addCards(res);
-
-
-				// 5) bonus - add buttons to resort existing cards order or to display additional values on the side.
-
-
-			})
-			.catch(console.log);
-
-
-
-
-
-	});*/
 });
 
 
 /* write as many functions down here as desired, to simplify your code and avoid repetition */
 
 const basicCall=((type,params,limit,adds)=>{
+			var format= params.format, 
+			include= params.include,
+			v= params.v,
+			start = params.start,
+			//q: '',
+			//qmode: '',
+			key = params.key;
+	
+	
+	
+	
 	var sample = `http://api.zotero.org/groups/2144277/items/top`;
 	var paraObj = {
-		params: params
+		params: {format, v, include, start, 'api_key':key}
 	}
 	
 	var initial;
 	var total;
 	var series =[];
 	var iterator = limit;
-	var start = 0;
 
 	var basic = Axios[type](sample, paraObj)
 		.then(result=>{
@@ -128,10 +60,11 @@ const basicCall=((type,params,limit,adds)=>{
 			
 			console.log('second call: ', total, initial, params, paraObj);
 			
-			while(params['start'] < +total){
-				params['start'] = i*iterator;
-				//reference issues...
-				series.push(Axios[type](sample, {params:{start:i*iterator}}));
+			while(start < +total){
+				start = i*iterator;
+				
+				//reference issues: use a simple string/int var to hold parameter... if using objects this will be re-assigned
+				series.push(Axios[type](sample, {params: {format, v, include, start, 'api_key':key} }));
 				i++;
 			}
 			 
@@ -159,6 +92,7 @@ const basicReturns = (promObj=>{
 	.catch(console.log);
 	
 	var allData = Promise.all(getSeries).then(resSeries=>{
+		
 		var res = resSeries.map(res=>res.data);
 		data = data.concat(...res);
 		data = data.map(res=>res.data);
