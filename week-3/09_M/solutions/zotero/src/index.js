@@ -4,6 +4,10 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 
+var AUTH_TOKEN = 'ubzx24lblowvuxx3';
+
+Axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
+
 const key = '4XchKcJeLMhVHlRj2J80nzAm' ;
 
 var params = {
@@ -19,14 +23,14 @@ var params = {
 window.onload=(()=>{
 
 	console.log('window loaded');
-	
+	/*
 	var getSample = basicCall('get', params, 25, null);
 	console.log(getSample);
 	
 	var getReturns = basicReturns(getSample);
 	
 	getReturns.then(console.log);
-	
+	*/
 	testApi();
 
 
@@ -34,8 +38,11 @@ window.onload=(()=>{
 
 const testApi = ()=>{
 	
-	var res = Axios.get('http://api.zotero.org/groups/2144277/items/FCB5J7RN?key=' + key).then(console.log);
+	//var res = Axios.get('http://api.zotero.org/groups/2144277/items/FCB5J7RN?key=' + key).then(console.log);
 	
+	var res = Axios.get('http://api.repo.nypl.org/api/v1/items/search?q=cats&publicDomainOnly=true').then(console.log);
+	
+	//{headers:{authtoken:'ubzx24lblowvuxx3'}}
 	
 }
 
